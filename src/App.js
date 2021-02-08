@@ -1,9 +1,26 @@
-import './App.css';
+import React, { Component } from 'react';
+import Tasks from './Components/Overview';
 
-function App() {
+class App extends Component {
+  state = {
+    tasks: []
+  }
+
+  render() {
   return (
-    <div></div>
+    <div>
+      <h1>Task List</h1>
+      <form>
+        <label>
+        </label>
+        <input>
+        </input>
+        <button></button>
+      </form>
+      <Tasks></Tasks>
+    </div>
   );
+  }
 }
 
 export default App;
