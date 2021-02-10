@@ -1,11 +1,17 @@
 import React from 'react';
+import uniqid from "uniqid";
 
-const Tasks = (props) => {
+const Overview = (props) => {
+
+    const {tasks} = props;
+
     return(
-        <div>
-            <h1>{props.taskName}</h1>
-        </div>
+        <ul>
+            {tasks.map((task) => {
+        return <li key={uniqid()}>{task}</li>;
+      })}
+        </ul>
     )
 }
 
-export default Tasks;
+export default Overview;
